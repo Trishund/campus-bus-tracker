@@ -1,0 +1,205 @@
+#root {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.app-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
+}
+
+/* Header Styles */
+.app-header {
+    height: 60px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 2000;
+    position: relative;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.app-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+}
+
+.app-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    /* Handwritten style font fallback */
+    font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+}
+
+.menu-btn {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+/* Menu Overlay Styles */
+.menu-overlay {
+    position: absolute;
+    top: 60px;
+    /* Below header */
+    right: 0;
+    width: 250px;
+    background-color: white;
+    box-shadow: -2px 5px 10px rgba(0, 0, 0, 0.2);
+    z-index: 3000;
+    border-bottom-left-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+.menu-item {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.menu-item:hover {
+    color: #007bff;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Utility classes */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.btn:hover {
+    background-color: #e0e0e0;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #bd2130;
+}
+
+/* Pulsating Animation for Driver App */
+.pulsating-circle {
+    width: 30px;
+    height: 30px;
+    background-color: #4caf50;
+    border-radius: 50%;
+    margin: 20px auto;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(76, 175, 80, 0);
+    }
+
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(76, 175, 80, 0);
+    }
+}
+
+/* Custom Leaflet Icons */
+.custom-bus-icon,
+.custom-buggy-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-stop-icon {
+    background: transparent;
+}

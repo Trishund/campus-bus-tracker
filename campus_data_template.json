@@ -1,0 +1,29 @@
+{
+    "mapBounds": {
+        "northEast": {
+            "lat": 0.0,
+            "lng": 0.0
+        },
+        "southWest": {
+            "lat": 0.0,
+            "lng": 0.0
+        }
+    },
+    "stops": [
+        {
+            "name": "Main Gate",
+            "lat": 0.0,
+            "lng": 0.0
+        },
+        {
+            "name": "Library",
+            "lat": 0.0,
+            "lng": 0.0
+        },
+        {
+            "name": "Hostel A",
+            "lat": 0.0,
+            "lng": 0.0
+        }
+    ]
+}
